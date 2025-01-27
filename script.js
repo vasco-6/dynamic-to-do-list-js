@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
-    
+
     // Load tasks from localStorage
     loadTasks();
 
@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const listItem = document.createElement('li');
         listItem.textContent = taskText;
+
+        // Add a class to the list item
+        listItem.classList.add('task-item');
 
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
@@ -53,6 +56,9 @@ document.addEventListener('DOMContentLoaded', () => {
         storedTasks.forEach((taskText) => {
             const listItem = document.createElement('li');
             listItem.textContent = taskText;
+
+            // Add a class to the list item
+            listItem.classList.add('task-item');
 
             const removeButton = document.createElement('button');
             removeButton.textContent = 'Remove';
